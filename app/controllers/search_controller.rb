@@ -4,6 +4,12 @@ require "net/http"
 class SearchController < ApplicationController
 
   def show
+    nearest_station_search
+  end
+
+  private
+
+  def nearest_station_search
     # I could not figure how to search by location without splitting up the params as seen below!
     # Also I way prefer NET HTTP to Faraday so I hope thats alright...
     street = params[:location].split(',').first
