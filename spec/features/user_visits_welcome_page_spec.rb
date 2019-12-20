@@ -24,7 +24,12 @@ describe "As a user on the welcome page" do
       within '#station-information' do
         expect(page).to have_content("Station Name:")
         expect(page).to have_content("Address:")
+        expect(page).to have_content("Fuel Type:")
         expect(page).to have_content("Access Times:")
+        expect(page).to have_css(".name")
+        expect(page).to have_css(".address")
+        expect(page).to have_css(".fuel_type")
+        expect(page).to have_css(".access_times")
       end
 
     end
