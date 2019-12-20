@@ -13,7 +13,6 @@ describe "Nearest Station Search" do
       expect(current_path).to eq('/search')
 
       within '#station-information' do
-        expect(page).to have_content("Station Name:")
         expect(page).to have_content("Address:")
         expect(page).to have_content("Fuel Type:")
         expect(page).to have_content("Access Times:")
