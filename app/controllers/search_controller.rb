@@ -24,9 +24,7 @@ class SearchController < ApplicationController
     request = Net::HTTP::Get.new(url)
     request["X-Api-Key"] = ENV["NREL_KEY"]
 
-    response = https.request(request)
-
-    closest_station_results = JSON.parse(response.body, symbolize_names: :true)
+    closest_station_results = JSON.parse(https.request(request).body, symbolize_names: :true)
 
     @station = closest_station_results[:fuel_stations][0]
   end
