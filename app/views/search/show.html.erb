@@ -1,8 +1,16 @@
 <h1>Information About The Station Nearest To You</h1>
 
 <section id='station-information'>
-  <h2 class='name'><%= @station[:station_name] %></h2>
+  <h2>Station Information</h2>
+  <h3 class='name'><%= @station[:station_name] %></h3>
   <p class='address'>Address: <%= @station[:street_address] %> <%= @station[:city] %>, <%= @station[:state] %> <%= @station[:zip] %></p>
-  <p class='fuel_type'>Fuel Type: <%= @station[:fuel_type_code] %></p>
-  <p class='access_times'>Access Times: <%= @station[:access_days_time] %></p>
+  <p class='fuel-type'>Fuel Type: <%= @station[:fuel_type_code] %></p>
+  <p class='access-times'>Access Times: <%= @station[:access_days_time] %></p>
+</section>
+
+<section id="navigation-information">
+  <h2>Navigation Information</h2>
+  <p class='distance'></p>
+  <p class='travel-time'></p>
+  <p class='directions'></p>
 </section>
